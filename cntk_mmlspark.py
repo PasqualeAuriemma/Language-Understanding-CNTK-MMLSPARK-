@@ -149,8 +149,10 @@ else:
     labe.append(temp1)
   labe = labe[1:]
   #------------------------------- Write --------------
+  
   out_file = open(data1['train4']['file'],"w")
   #print(len(featur), " ",len(featur[0]))
+  #ddsdsd
   for num,item in enumerate(featur):
     size=len(item)
     print(num, " ", size)
