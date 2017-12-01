@@ -7,7 +7,12 @@ where i have taken the code and the model. Then I have integrate mmlspark functi
 
 Run this command to install and to make this software work:
 
-spark-submit --packages Azure:mmlspark:0.10 cntk_mmlspark.py
+spark-submit --packages Azure:mmlspark:0.10 cntk_mmlspark_BiLSTM.py
+
+or for normal CNTK:
+
+python cntk_BiLSTM.py
+
 
 CNTK documentation:
 
