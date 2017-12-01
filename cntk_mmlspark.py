@@ -228,7 +228,7 @@ def create_reader(path, is_training):
      )), randomize=is_training, max_sweeps = C.io.INFINITELY_REPEAT if is_training else 1)
 #intent        = C.io.StreamDef(field='S1', shape=num_intents, is_sparse=True),
 # peek
-reader = create_reader(data1['train3']['file'], is_training=True)
+reader = create_reader(data1['train4']['file'], is_training=True)
 reader.streams.keys()
 
 #================================================================================
@@ -304,7 +304,7 @@ def train(reader, model_func, max_epochs=max_epochs):
             t += data[y].num_samples                    # samples so far
             print(epoch,"p= ",t+p)
         trainer.summarize_training_progress()
-        model_path = "model_%d.cntk" % epoch
+        model_path = "model_%d.cntk" % epoch+1
     print("Saving final model to '%s'" % model_path)
     model.save(model_path)
     print("%d epochs complete." % max_epochs)
@@ -322,7 +322,7 @@ def do_train():
 
 
 # load the model for epoch 0
-model_path = "model_{}.cntk".format(max_epochs-1)
+model_path = "model_{}.cntk".format(max_epochs)
 
 if os.path.isfile(model_path):
     z = C.Function.load(model_path)
@@ -413,7 +413,7 @@ df = df.withColumn("features", one_hot("batchs")).select("features")
 
 df.printSchema()
 
-location = "/home/sod/Scrivania/"+ model_path
+location =  model_path
 
 cntkModel = CNTKModel().setModelLocation(spark, location )\
                    .setOutputNodeName("classify") \
