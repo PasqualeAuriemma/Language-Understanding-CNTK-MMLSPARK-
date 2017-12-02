@@ -1,5 +1,5 @@
 # CNTK with MMLSPARK
-I want to integrate spark in CNTK using mmlspark. In this project I have used a RNN network, precisely a Bilateral LSTM network and I refer this notebook to fetch the model and code:
+I want to integrate spark in CNTK using mmlspark. In this project I have used a RNN network, precisely a Bilateral LSTM network and I refer to this notebook to fetch the model and code:
 
 https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_202_Language_Understanding.ipynb
 
