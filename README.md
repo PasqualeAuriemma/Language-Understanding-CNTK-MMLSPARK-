@@ -5,7 +5,7 @@ https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_202_Language_Unders
 
 where i have taken the code and the model. Then I have integrate mmlspark function to get same output than normal CNTK evaluation.
 
-Run this command to install and to make this software work:
+To run this command:
 
 spark-submit --packages Azure:mmlspark:0.10 cntk_mmlspark_BiLSTM.py
 
