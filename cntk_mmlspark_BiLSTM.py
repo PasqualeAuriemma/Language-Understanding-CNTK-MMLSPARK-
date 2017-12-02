@@ -40,7 +40,7 @@ spark = SparkSession(sc)
 
 # let's run a sequence through
 #seq="BOS i want to fly from san francisco at 838 am and arrive in denver at 1110 in the morning EOS"
-seq = 'BOS zone from seattle at 838 am to san francisco monday EOS'
+seq = 'BOS i need a flight tomorrow from columbus to minneapolis at 838 am EOS'
 print("sentence= ", seq)
 length=len(seq.split())
 
