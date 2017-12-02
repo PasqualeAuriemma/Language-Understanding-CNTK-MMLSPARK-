@@ -1,15 +1,15 @@
 # BiLSTM_MMLSPARK
-I want to integrate CNTK with spark using mmlspark. For this project i have used a RNN network, precisely a Bilateral LSTM network. I refer this notebook:
+I want to integrate CNTK with spark using mmlspark. In this project I have used a RNN network, precisely a Bilateral LSTM network and I refer this notebook to fetch the model:
 
 https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_202_Language_Understanding.ipynb
 
-where i have taken the code and the model. Then I have integrate mmlspark function to get same output than normal CNTK evaluation.
+I have integrate mmlspark function in this notebook to get same output than normal CNTK evaluation.
 
 To run this code with mmlspark:
 
 spark-submit --packages Azure:mmlspark:0.10 cntk_mmlspark_BiLSTM.py
 
-or for normal CNTK:
+or with normal CNTK:
 
 python cntk_BiLSTM.py
 
