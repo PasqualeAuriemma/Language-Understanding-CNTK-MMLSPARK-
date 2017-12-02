@@ -6,7 +6,7 @@ import training_evaluating_model as TE
 #================================= Run Train and Evaluation ========================
 
 # number of epoch
-max_epochs=2
+max_epochs=70
 
 # load the model for epoch
 model_path = "model_{}.cntk".format(max_epochs-1)

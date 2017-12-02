@@ -6,6 +6,10 @@ import numpy as np
 #====================================================================================
 #========================== DOWNLOAD AND BUILD DATASET ==============================
 
+#In this tutorial, we are going to use a (lightly preprocessed) version of the ATIS dataset. You can download the data automatically by running the cells below or by executing the manual instructions.
+#Fallback manual instructions Download the ATIS training and test files and put them at the same folder as this notebook. If you want to see how the model is predicting on new sentences you will also need the vocabulary files for queries and slots
+
+
 def download(url, filename):
     """ utility function to download a file """
     response = requests.get(url, stream=True)
@@ -47,7 +51,7 @@ slots_dict = {slots_wl[i]:i for i in range(len(slots_wl))}
 
 # it is possible to build the new dataset with this functions. To ensure that every word recognizes the context 
 # of sentence, I consider the two preceding words and the two following words of my token in the sentence. For 
-# this aim I use a window of 5 words, for each word of this window I create one-hot vector with words dictionary 
+# this aim I use a window of 5 words, for each word of this window I create one-hot array with words dictionary 
 # size. After all I feed the model with the matrix of one-hot arrays flatten of this window like input. The label 
 # is a one-hot array with labels dictionary size.
 
