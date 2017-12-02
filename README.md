@@ -10,7 +10,7 @@ Each word of this window I trasform it to one-hot array with words's vocabolary 
 
 An example:
 
-sentence = BOS zone from seattle at 838 am to san francisco monday EOS
+sentence = BOS i need a flight on monday from columbus to minneapolis at 838 am EOS
 
 result with mmlspark:  [('BOS', 'O'), ('i', 'O'), ('need', 'O'), ('a', 'O'), ('flight', 'O'), ('on', 'O'), ('monday', 'B-depart_date.day_name'), ('from', 'O'), ('columbus', 'B-fromloc.city_name'), ('to', 'O'), ('minneapolis', 'B-toloc.city_name'), ('at', 'O'), ('838', 'B-depart_time.time'), ('am', 'I-depart_time.time'), ('EOS', 'O')]
 
