@@ -81,9 +81,8 @@ cntkModel = CNTKModel().setModelLocation(spark, model_path )\
 df = cntkModel.transform(df).cache()
 
 def probsToEntities(probs):
-    reshaped_probs = B.np.array(probs).reshape(1, 129)
-    nn = [B.slots_wl[B.np.argmax(probs)] for probs in reshaped_probs]
-    return nn[0]
+    nn = B.slots_wl[B.np.argmax(probs)] 
+    return nn
 
 toEntityUDF = udf(probsToEntities,StringType())
 df = df.withColumn("entities", toEntityUDF("prob"))
