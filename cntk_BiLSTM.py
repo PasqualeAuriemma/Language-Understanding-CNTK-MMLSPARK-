@@ -1,6 +1,7 @@
 #================= IMPORTING FILE =================================================
 
 import training_evaluating_model as TE
+import build_dataset as B
 
 #===================================================================================
 #================================= Run Train and Evaluation ========================
@@ -24,7 +25,7 @@ print("output= ",z.outputs)
 
 # let's run a sequence through
 #seq="BOS i want to fly from san francisco at 838 am and arrive in denver at 1110 in the morning EOS"
-seq = 'BOS zone from seattle at 838 am to san francisco monday EOS'
+seq = 'BOS show flights from burbank to st. louis on monday EOS'
 print("sentence= ", seq)
 
 #====================================================================================
