@@ -68,7 +68,7 @@ def to_float(item):
   return tmp  
 
 one_hot = udf(to_float, ArrayType(FloatType()))
-df = df.withColumn("features", one_hot("batchs"))#.select("features")
+df = df.withColumn("features", one_hot("batchs")).select("features")
 df.printSchema()
 
 cntkModel = CNTKModel().setModelLocation(spark, model_path )\
@@ -78,7 +78,7 @@ cntkModel = CNTKModel().setModelLocation(spark, model_path )\
                    .setMiniBatchSize(1)
 
 df = cntkModel.transform(df).cache()
-df.show()
+
 def probsToEntities(probs):
     nn = B.slots_wl[B.np.argmax(probs)] 
     return nn
